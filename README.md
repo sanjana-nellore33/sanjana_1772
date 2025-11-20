@@ -209,6 +209,12 @@ Displays success or error messages
 
 Enables smooth navigation between options
 
+5.screenshots
+<img width="523" height="803" alt="Screenshot 2025-11-20 153202" src="https://github.com/user-attachments/assets/a960944b-deab-446b-9d71-79df1079fae7" />
+<img width="395" height="389" alt="Screenshot 2025-11-20 153251" src="https://github.com/user-attachments/assets/ef3e3456-28c6-4747-a6cc-2dd824245f13" />
+<img width="461" height="727" alt="Screenshot 2025-11-20 153317" src="https://github.com/user-attachments/assets/9b014ec5-7968-4e7d-aaa5-b12935e4bbfc" />
+<img width="551" height="606" alt="Screenshot 2025-11-20 153414" src="https://github.com/user-attachments/assets/61b3a191-8b2c-4b2f-b8de-98cb0f415fe0" />
+
 
 
 👉 How to Run the Program
