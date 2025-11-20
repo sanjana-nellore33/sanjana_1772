@@ -5,14 +5,12 @@
 #define FILE_NAME "rooms.dat"
 #define MAX_NAME_LEN 100
 #define MAX_ROOMS 200
-
 // ------------------ STRUCT DEFINITION ------------------
 typedef struct {
     int roomNo;
     int occupied;               // 0 = empty, 1 = occupied
     char patientName[MAX_NAME_LEN];
 } Room;
-
 // ------------------ FUNCTION DECLARATIONS ------------------
 void assignRoom();
 void viewRooms();
@@ -23,7 +21,6 @@ int roomExists(int roomNo);
 void saveRoom(Room r);
 void loadRooms(Room rooms[], int *count);
 void writeAllRooms(Room rooms[], int count);
-
 // ------------------ MAIN MENU ------------------
 int main() {
     int choice;
@@ -61,7 +58,6 @@ int main() {
 
     return 0;
 }
-
 // ------------------ ASSIGN PATIENT TO ROOM ------------------
 void assignRoom() {
     Room r;
@@ -85,7 +81,6 @@ void assignRoom() {
 
     printf("Patient assigned to room successfully!\n");
 }
-
 // ------------------ SAVE ROOM ------------------
 void saveRoom(Room r) {
     FILE *fp = fopen(FILE_NAME, "ab");
@@ -96,7 +91,6 @@ void saveRoom(Room r) {
     fwrite(&r, sizeof(Room), 1, fp);
     fclose(fp);
 }
-
 // ------------------ CHECK ROOM EXISTS ------------------
 int roomExists(int roomNo) {
     FILE *fp = fopen(FILE_NAME, "rb");
@@ -113,7 +107,6 @@ int roomExists(int roomNo) {
     fclose(fp);
     return 0;
 }
-
 // ------------------ VIEW ALL ROOMS ------------------
 void viewRooms() {
     FILE *fp = fopen(FILE_NAME, "rb");
@@ -135,7 +128,6 @@ void viewRooms() {
 
     fclose(fp);
 }
-
 // ------------------ SEARCH ROOM ------------------
 void searchRoom() {
     FILE *fp = fopen(FILE_NAME, "rb");
@@ -165,7 +157,6 @@ void searchRoom() {
 
     fclose(fp);
 }
-
 // ------------------ UPDATE ROOM ------------------
 void updateRoom() {
     Room rooms[MAX_ROOMS];
@@ -196,7 +187,6 @@ void updateRoom() {
         printf("Room not found.\n");
     }
 }
-
 // ------------------ DISCHARGE ROOM ------------------
 void dischargeRoom() {
     Room rooms[MAX_ROOMS];
@@ -235,7 +225,6 @@ void dischargeRoom() {
     if (!found)
         printf("Room not found.\n");
 }
-
 // ------------------ LOAD & WRITE ALL ROOMS ------------------
 void loadRooms(Room rooms[], int *count) {
     FILE *fp = fopen(FILE_NAME, "rb");
@@ -247,7 +236,6 @@ void loadRooms(Room rooms[], int *count) {
 
     fclose(fp);
 }
-
 void writeAllRooms(Room rooms[], int count) {
     FILE *fp = fopen(FILE_NAME, "wb");
     if (!fp) {
