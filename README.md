@@ -82,7 +82,6 @@ Standard Libraries Used
 
 #include <string.h>    // string operations (fgets, strcspn, etc.)
 
-(Note: <stdlib.h> is NOT required since no dynamic memory or system functions are used.)
 
 
 
